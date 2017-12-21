@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
 public class Experiences
 {
-    public int ExperiencePlayer
+    private float m_experiencePlayer = 0;
+    public float ExperiencePlayer
     {
         get { return m_experiencePlayer; }
         set { m_experiencePlayer = value; }
     }
 
-
-    public void ExpPlus(int _expPlus)
+    public void ExpPlus(float _expPlus)
     {
         m_experiencePlayer += _expPlus;
     }
-
-    private int m_experiencePlayer = 0;
 }

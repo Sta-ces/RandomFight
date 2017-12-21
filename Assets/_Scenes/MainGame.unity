@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 3
-  m_FillAmount: 0.692
+  m_FillAmount: 0.087
   m_FillClockwise: 1
   m_FillOrigin: 2
 --- !u!222 &674699359
@@ -549,7 +549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd348e53783ed445a72a5ec576c1fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_buttonExperiences: {fileID: 674699357}
   m_locationExperiences: {fileID: 748992010}
+  m_experienceMax: 100
 --- !u!1 &1177911966
 GameObject:
   m_ObjectHideFlags: 0
