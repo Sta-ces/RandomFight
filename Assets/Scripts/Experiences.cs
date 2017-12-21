@@ -1,36 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Experiences : MonoBehaviour
+[System.Serializable]
+public class Experiences
 {
-	#region Public Members
+    public int ExperiencePlayer
+    {
+        get { return m_experiencePlayer; }
+        set { m_experiencePlayer = value; }
+    }
 
-	#endregion
 
-	#region Public void
+    public void ExpPlus(int _expPlus)
+    {
+        m_experiencePlayer += _expPlus;
+    }
 
-	#endregion
-
-	#region System
-
-		void Start ()
-		{
-			
-		}
-	
-		void Update ()
-		{
-			
-		}
-
-	#endregion
-
-	#region Tools Debug And Utility
-
-	#endregion
-
-	#region Private and Protected Members
-
-	#endregion
+    private int m_experiencePlayer = 0;
 }
