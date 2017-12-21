@@ -10,10 +10,8 @@ public class DisplayGame
         _location.text = _text;
     }
 
-    public void UIExperience(Button _button, float _exp, int _max)
+    public void UIExperience(Button _button, float _percentage)
     {
-        Calcul percCalcul = new Calcul();
-        float percentage = percCalcul.Percentage(_exp,_max) / 100;
-        _button.GetComponent<Image>().fillAmount = percentage;
+        _button.GetComponent<Image>().fillAmount = _percentage;
     }
 }

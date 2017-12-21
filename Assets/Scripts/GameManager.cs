@@ -26,12 +26,14 @@ public class GameManager : MonoBehaviour
             m_classExperiences = new Experiences();
             m_experiencesPlayer = m_classExperiences.ExperiencePlayer;
             m_displayGame = new DisplayGame();
-        }
+            m_percentCalcul = new Calcul();
+    }
 	
 	    void Update()
-	    {
+        {
+            float percentage = m_percentCalcul.Percentage(m_experiencesPlayer, m_experienceMax) / 100;
             m_displayGame.DisplayText(m_locationExperiences, m_experiencesPlayer.ToString()+"/"+m_experienceMax.ToString());
-            m_displayGame.UIExperience(m_buttonExperiences, m_experiencesPlayer, m_experienceMax);
+            m_displayGame.UIExperience(m_buttonExperiences, percentage);
         }
 
         private void OnGUI()
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         private Experiences m_classExperiences;
         private float m_experiencesPlayer;
         private DisplayGame m_displayGame;
+        private Calcul m_percentCalcul;
 
-	#endregion
+    #endregion
 }
