@@ -1,0 +1,7 @@
+- Barre d'experience
+- Niveau
+- Inventaire
+- Portrait Personnage (Optionnel)
+- Vie Personnage / Ennemi
+- Fenêtre d'amélioration
+- Flèche de navigation

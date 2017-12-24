@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
 {
     #region Public Members
 
-    [Header("Experiences:")]
-    public Button m_buttonExperiences;
-    public Text m_locationExperiences;
-    public int m_experienceMax = 100;
+	    [Header("Experiences:")]
+	    public Button m_buttonExperiences;
+	    public Text m_locationExperiences;
+	    public int m_experienceMax = 100;
 
     #endregion
 
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
             m_experiencesPlayer = m_classExperiences.ExperiencePlayer;
             m_displayGame = new DisplayGame();
             m_percentCalcul = new Calcul();
-    }
+    	}
 	
 	    void Update()
         {
