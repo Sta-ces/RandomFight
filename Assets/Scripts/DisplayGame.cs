@@ -12,6 +12,6 @@ public class DisplayGame
 
     public void UIExperience(Button _button, float _percentage)
     {
-        _button.GetComponent<Image>().fillAmount = _percentage;
+        _button.GetComponent<Image>().fillAmount = Mathf.Clamp01(_percentage);
     }
 }

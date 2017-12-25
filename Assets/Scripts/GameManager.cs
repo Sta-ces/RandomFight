@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
         private void ExperiencesFunction(){
             float percentage = m_calcul.ValueToPercentage(m_experiencesPlayer, m_experienceMax) / 100;
-            m_displayGame.DisplayText(m_locationExperiences, m_experiencesPlayer.ToString()+"/"+m_experienceMax.ToString());
+            m_displayGame.DisplayText(m_locationExperiences, Mathf.Floor(m_experiencesPlayer).ToString()+" / "+m_experienceMax.ToString());
             m_displayGame.UIExperience(m_buttonExperiences, percentage);
         }
 
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         	if(m_experiencesPlayer >= m_experienceMax){
         		m_levelPlayer++;
         		m_experiencesPlayer -= m_experienceMax;
-        		m_experienceMax *= 2;
+        		m_experienceMax += m_experienceMax / 2;
         	}
         	m_displayGame.DisplayText(m_locationLevel, m_levelPlayer.ToString());
         }

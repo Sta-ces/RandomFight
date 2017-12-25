@@ -1,7 +1,8 @@
 - Barre d'experience
 - Niveau
-- Inventaire
-- Portrait Personnage (Optionnel)
+- Bouton Attaque et Potions
 - Vie Personnage / Ennemi
+- Inventaire
 - Fenêtre d'amélioration
 - Flèche de navigation
+- Portrait Personnage (Optionnel)
