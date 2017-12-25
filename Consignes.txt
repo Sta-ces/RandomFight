@@ -1,7 +1,7 @@
 - Barre d'experience
 - Niveau
-- Bouton Attaque et Potions
 - Vie Personnage / Ennemi
+- Bouton Attaque et Potions
 - Inventaire
 - Fenêtre d'amélioration
 - Flèche de navigation
