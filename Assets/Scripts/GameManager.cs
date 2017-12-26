@@ -19,19 +19,31 @@ public class GameManager : MonoBehaviour
 	    [Range(1,200)]
 	    public int m_levelUpExperience = 100;
 
-	    [Header("Lifes:")]
-	    public Text m_locationLifeEnemi;
+	    [Header("Player:")]
 	    public Text m_locationLifePlayer;
 	    [Range(1,100)]
 	    public int m_lifePlayerMax = 50;
 	    public bool m_displayMaxLife = false;
+	    public Text m_locationDamagePlayer;
+	    [Range(1,100)]
+	    public int m_damageMaxPlayer = 5;
+
+	    [Header("Enemies")]
+	    public Text m_locationLifeEnemi;
+	    public Text m_locationNameEnemi;
+	    public Text m_locationDamageEnemi;
 
     #endregion
 
     #region Public void
 
 	    public void Attack(){
-	    	Debug.Log("Attack");
+	    	int damagePlayer = m_calcul.RandomNumber(0, m_damageMaxPlayer);
+	    	int damageEnemi = m_calcul.RandomNumber(0, m_lifeEnemi/2);
+	    	m_displayGame.DisplayText(m_locationDamagePlayer, "-"+damagePlayer.ToString());
+	    	m_displayGame.DisplayText(m_locationDamageEnemi, "-"+damageEnemi.ToString());
+	    	m_lifeEnemi -= damagePlayer;
+	    	m_lifePlayer -= damageEnemi;
 	    }
 
 	    public void Potions(){
@@ -52,6 +64,8 @@ public class GameManager : MonoBehaviour
             m_enemies = new Enemies();
             m_enemies.CreateEnemiesList();
             m_listEnemies = m_enemies.ListEnemies;
+	    	m_displayGame.DisplayText(m_locationDamagePlayer, "");
+	    	m_displayGame.DisplayText(m_locationDamageEnemi, "");
     	}
 	
 	    void Update()
@@ -59,6 +73,7 @@ public class GameManager : MonoBehaviour
             ExperiencesFunction();
             LevelFunction();
             LifeFunction();
+            RandomEnemiFunction();
         }
 
         void OnGUI()
@@ -87,15 +102,30 @@ public class GameManager : MonoBehaviour
         }
 
         private void LifeFunction(){
-        	m_lifeEnemi = 120;
         	string displayLife = m_lifePlayer.ToString();
         	
-        	if(m_displayMaxLife){
+        	if(m_displayMaxLife)
         		displayLife += " / "+m_lifePlayerMax.ToString();
-        	}
+
+        	if(m_lifeEnemi <= 0)
+        		isEnemiAlive = false;
 
         	m_displayGame.DisplayText(m_locationLifePlayer, displayLife);
         	m_displayGame.DisplayText(m_locationLifeEnemi, m_lifeEnemi.ToString());
+        }
+
+        private void RandomEnemiFunction(){
+        	if(!isEnemiAlive){
+	        	Enemi selected;
+
+	        	do{
+	        		selected = m_listEnemies[m_calcul.RandomNumber(0, m_listEnemies.Count)];
+	        	}while(selected.enemi_levelRequired > m_levelPlayer);
+
+	        	m_displayGame.DisplayText(m_locationNameEnemi, selected.enemi_name);
+	        	m_lifeEnemi = selected.enemi_life;
+	        	isEnemiAlive = true;
+	        }
         }
 
     #endregion
@@ -111,6 +141,8 @@ public class GameManager : MonoBehaviour
         private int m_lifeEnemi;
         private Enemies m_enemies;
         private List<Enemi> m_listEnemies;
+
+        private bool isEnemiAlive = false;
 
     #endregion
 

@@ -1,10 +1,13 @@
-- Barre d'experience
-- Niveau
-- Vie Personnage / Ennemi
-- Bouton Attaque et Potions
-- Liste Ennemis
-- Random Ennemi (nom + vie)
-- Inventaire
-- Fenêtre d'amélioration
-- Flèche de navigation
-- Portrait Personnage (Optionnel)
+(OK)	- Barre d'experience
+(OK)	- Niveau
+(OK)	- Vie Personnage / Ennemi
+(OK)	- Bouton Attaque et Potions
+(OK)	- Liste Ennemis
+(OK)	- Random Ennemi (nom + vie)
+(OK)	- Attaque => retire de la vie (Personnage / Ennemi)
+		- Ajoute Expérience
+		- Inventaire
+		- Potion => ajout effet d'une potion
+		- Fenêtre d'amélioration
+		- Flèche de navigation
+		- Portrait Personnage (Optionnel)

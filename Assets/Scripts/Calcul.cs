@@ -12,7 +12,7 @@ public class Calcul
     	return (_percent * (_maxNum - _minNum) / 100) + _minNum;
     }
 
-    public int Random(){
-    	return 0;
+    public int RandomNumber(int min, int max){
+    	return Random.Range(min, max);
     }
 }
