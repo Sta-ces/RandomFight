@@ -2,6 +2,8 @@
 - Niveau
 - Vie Personnage / Ennemi
 - Bouton Attaque et Potions
+- Liste Ennemis
+- Random Ennemi (nom + vie)
 - Inventaire
 - Fenêtre d'amélioration
 - Flèche de navigation

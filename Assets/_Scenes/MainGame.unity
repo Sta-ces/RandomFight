@@ -931,6 +931,7 @@ MonoBehaviour:
   m_locationLifeEnemi: {fileID: 1035829296}
   m_locationLifePlayer: {fileID: 124856777}
   m_lifePlayerMax: 50
+  m_displayMaxLife: 0
 --- !u!1 &1177911966
 GameObject:
   m_ObjectHideFlags: 0

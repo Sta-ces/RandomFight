@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
             m_displayGame = new DisplayGame();
             m_calcul = new Calcul();
             m_lifePlayer = m_lifePlayerMax;
+            m_enemies = new Enemies();
+            m_enemies.CreateEnemiesList();
+            m_listEnemies = m_enemies.ListEnemies;
     	}
 	
 	    void Update()
@@ -85,13 +88,10 @@ public class GameManager : MonoBehaviour
 
         private void LifeFunction(){
         	m_lifeEnemi = 120;
-        	string displayLife;
+        	string displayLife = m_lifePlayer.ToString();
         	
         	if(m_displayMaxLife){
-        		displayLife = m_lifePlayer.ToString()+" / "+m_lifePlayerMax.ToString();
-        	}
-        	else{
-        		displayLife = m_lifePlayer.ToString();
+        		displayLife += " / "+m_lifePlayerMax.ToString();
         	}
 
         	m_displayGame.DisplayText(m_locationLifePlayer, displayLife);
@@ -109,6 +109,11 @@ public class GameManager : MonoBehaviour
         private int m_levelPlayer = 1;
         private int m_lifePlayer;
         private int m_lifeEnemi;
+        private Enemies m_enemies;
+        private List<Enemi> m_listEnemies;
 
     #endregion
+
+    #region TEST Zone
+	#endregion
 }

@@ -11,4 +11,8 @@ public class Calcul
     public float PercentageToValue(float _percent, float _maxNum, float _minNum = 0){
     	return (_percent * (_maxNum - _minNum) / 100) + _minNum;
     }
+
+    public int Random(){
+    	return 0;
+    }
 }
