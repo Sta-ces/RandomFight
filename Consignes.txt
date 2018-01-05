@@ -5,8 +5,11 @@
 (OK)	- Liste Ennemis
 (OK)	- Random Ennemi (nom + vie)
 (OK)	- Attaque => retire de la vie (Personnage / Ennemi)
-		- Ajoute Expérience
+(OK)	- Ajoute Expérience
 		- Inventaire
+			- Ajout Potion (Random gain de potion)
+			- Utilisation Potion
+			- Multiples Potions (ex: 2x Heath, 5x Forces, etc)
 		- Potion => ajout effet d'une potion
 		- Fenêtre d'amélioration
 		- Flèche de navigation
