@@ -1,16 +1,42 @@
+﻿3 mots :
+- Random
+- RPG
+- Die and Retry (difficile)
+
+JEU :
 (OK)	- Barre d'experience
 (OK)	- Niveau
 (OK)	- Vie Personnage / Ennemi
-(OK)	- Bouton Attaque et Potions
+(OK)	- Bouton Attaque (Clique HUD ennemi) et Potions (bouton sur le portrait)
 (OK)	- Liste Ennemis
 (OK)	- Random Ennemi (nom + vie)
 (OK)	- Attaque => retire de la vie (Personnage / Ennemi)
 (OK)	- Ajoute Expérience
-		- Inventaire
-			- Ajout Potion (Random gain de potion)
-			- Utilisation Potion
-			- Multiples Potions (ex: 2x Heath, 5x Forces, etc)
-		- Potion => ajout effet d'une potion
-		- Fenêtre d'amélioration
-		- Flèche de navigation
-		- Portrait Personnage (Optionnel)
+	- Retire de la vie à l'ennemi, PUIS au joueur en rapport avec l'ennemi
+	- Inventaire
+		- Ajout Potion (Random gain de potion)
+		- Utilisation Potion
+		- Multiples Potions (ex: 2x Heath, 5x Forces, etc)
+		- Ajout Arme ou Armure
+		- Suppression d'un objet dans l'inventaire (bouton)
+	- Potion => Ajout effet d'une potion
+	- Arme => Attaque augmente
+	- Armure => Defense augmente (attaque ennemi diminue)
+	- Fenêtre d'amélioration
+	- Flèche de navigation
+	- Rencontre PNJ ou Ennemi
+	- Différent lieux
+	- Hightscore (Niveau max atteint)
+	- Portrait Personnage
+
+MENU :
+	- Menu Principal
+	- Menu InGame
+	- Générique (début)
+	- Avertissement de début de partie (Explication. Exemple : ce jeu ne possède aucune sauvegarde)
+	- Création de personnage
+	- Choix entre 4 cartes (carte donne soit équipement, soit potion, soit rien)
+
+Post-Prod :
+	- Son
+	- Musique (Menu, Combat, Rencontre, Lieu Spécifique, Action du joueur, etc)
