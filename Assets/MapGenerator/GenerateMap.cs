@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerateMap : MonoBehaviour {
 
     public GameObject m_Floor;
-    public Vector2 m_MapSize;
+    public Vector3 m_MapSize;
     public string m_ParentMapName = "GeneratedMap";
 
     [Range(0,1)]
@@ -26,9 +26,12 @@ public class GenerateMap : MonoBehaviour {
         {
             for(int y = 0; y < m_MapSize.y; y++)
             {
-                Vector3 tilePosition = new Vector3(-m_MapSize.x / 2 + 0.5f + x, 0, -m_MapSize.y / 2 + 0.5f + y);
-                GameObject newTile = Instantiate(m_Floor, tilePosition, Quaternion.identity, mapParent);
-                newTile.transform.localScale = Vector3.one * (1 - m_OutlinePercent);
+                for (int z = 0; z < m_MapSize.z; z++)
+                {
+                    Vector3 tilePosition = new Vector3(-m_MapSize.x / 2 + 0.5f + x, -m_MapSize.y / 2 + 0.5f + y, -m_MapSize.z / 2 + 0.5f + z);
+                    GameObject newTile = Instantiate(m_Floor, tilePosition, Quaternion.identity, mapParent);
+                    newTile.transform.localScale = Vector3.one * (1 - m_OutlinePercent);
+                }
             }
         }
     }
