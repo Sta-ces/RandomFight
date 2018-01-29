@@ -34,7 +34,7 @@ public class GenerateMap : MonoBehaviour {
                     newTile.transform.localScale = Vector3.one * (1 - m_OutlinePercent);
 
                     // If the cube is on the surface
-                    if (y == m_MapSize.y - 1){}
+                    if (y == m_MapSize.y + 1){}
                 }
             }
         }

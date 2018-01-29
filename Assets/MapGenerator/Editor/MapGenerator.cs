@@ -10,6 +10,5 @@ public class MapGenerator : Editor {
         GenerateMap map = target as GenerateMap;
         if(map.m_ChangeOnScene)
             map.MapGenerator();
-
     }
 }

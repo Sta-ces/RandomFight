@@ -9,6 +9,9 @@ public class Spawner : MonoBehaviour {
 
     private void Awake()
     {
+        if (m_Player == null)
+            m_Player = gameObject;
+
         m_tallOfPlayer = m_Player.transform.lossyScale.y;
     }
 
