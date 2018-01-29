@@ -12,6 +12,11 @@ public class Calcul
     	return (_percent * (_maxNum - _minNum) / 100) + _minNum;
     }
 
+    public static float RandomNumber()
+    {
+        return Random.Range(0, 2);
+    }
+
     public static float RandomNumber(float _min, float _max)
     {
         return Random.Range(_min, _max);
