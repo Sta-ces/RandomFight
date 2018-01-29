@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(GenerateMap))]
 public class MapGenerator : Editor {
@@ -10,5 +11,9 @@ public class MapGenerator : Editor {
         GenerateMap map = target as GenerateMap;
         if(map.m_ChangeOnScene)
             map.MapGenerator();
+
+        /*EditorGUI.BeginDisabledGroup(map.m_OneObject == true);
+            map.m_OutlinePercent;
+        EditorGUI.EndDisabledGroup();*/
     }
 }

@@ -23,26 +23,26 @@ public class CharacterController_WithKeyboard : MonoBehaviour {
 
     private void Update()
     {
-        switchMovesCharacter();
+        StartCoroutine("switchMovesCharacter");
     }
 
 
-    private void switchMovesCharacter()
+    private IEnumerator switchMovesCharacter()
     {
         switch (m_CharacterMoves)
         {
             case e_CharacterMoves.IDLE:
                 break;
             case e_CharacterMoves.FORWARD:
-                m_rigidbody.AddForce(Vector3.forward * 10f);
+                m_rigidbody.AddForce(Vector3.forward * 10);
                 break;
             case e_CharacterMoves.LEFT:
                 break;
             case e_CharacterMoves.RIGHT:
                 break;
         }
-
-        //m_CharacterMoves = e_CharacterMoves.IDLE;
+        yield return new WaitForSeconds(3f);
+        m_CharacterMoves = e_CharacterMoves.IDLE;
     }
 
     private void OnGUI()

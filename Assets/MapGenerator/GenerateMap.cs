@@ -8,6 +8,7 @@ public class GenerateMap : MonoBehaviour {
     public GameObject m_Floor;
     public Vector3 m_MapSize;
     public string m_ParentMapName = "GeneratedMap";
+    public bool m_OneObject = false;
     [Range(0,1)]
     public float m_OutlinePercent;
 
@@ -32,9 +33,6 @@ public class GenerateMap : MonoBehaviour {
                     Vector3 tilePosition = new Vector3(-m_MapSize.x / 2 + 0.5f + x, -m_MapSize.y / 2 + 0.5f + y, -m_MapSize.z / 2 + 0.5f + z);
                     GameObject newTile = Instantiate(m_Floor, tilePosition, Quaternion.identity, mapParent);
                     newTile.transform.localScale = Vector3.one * (1 - m_OutlinePercent);
-
-                    // If the cube is on the surface
-                    if (y == m_MapSize.y + 1){}
                 }
             }
         }
